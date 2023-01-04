@@ -1,26 +1,27 @@
-import React from "react";
+import React, { FC } from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 
-const CostomInput = (props: any) => {
+interface Props {
+    placeholder: string;
 
-    
-    const { title = 'please enter', style, onChageText, secureTextEntry = false, keyboardtype } = props;
-    
-    
-    let placeholder:any
-    let onChangeText:(event: React.ChangeEvent<HTMLInputElement>) => void;
-    let keyboardType:any
-   
-    
+title:string;
+secureTextEntry:boolean;
+onChangeText: (text: string) => void
+keyboardtype:any;
+style:any
+}
+
+const CostomInput:FC<Props> = (props) => {
+    const { title = 'please enter', style, onChangeText, secureTextEntry = false, keyboardtype } = props;
+
     return (
         <View>
             <TextInput
                 placeholder={title}
                 style={[styles.input, style]}
-                onChangeText={onChageText}
+                onChangeText={onChangeText}
                 secureTextEntry={secureTextEntry}
-                keyboardType={keyboardtype}
-            />
+                keyboardType={keyboardtype}/>
         </View>
     )
 }
