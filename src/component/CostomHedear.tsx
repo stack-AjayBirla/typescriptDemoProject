@@ -11,7 +11,7 @@ imageurl:any
 }
 
 const CostomHedear:FC<Props> =(props:any)=>{
-    const{title,containerstyle,titleTextstyle,imageurl}=props;
+    const{title='',containerstyle='',titleTextstyle='',imageurl=''}=props;
     return(
         <View style={[styles.container,containerstyle]}>
             <Text style={[styles.titleText,titleTextstyle]}>{title}</Text>
@@ -21,12 +21,12 @@ const CostomHedear:FC<Props> =(props:any)=>{
 }
 const styles=StyleSheet.create({
     container:{
-      backgroundColor:'red',
+      backgroundColor:'white',
       alignItems:'center'  
     },
     titleText:{
-        color:'blue',
-        fontSize:18,
+        color:'black',
+        fontSize:22,
         fontWeight:'500'
     }
 })
