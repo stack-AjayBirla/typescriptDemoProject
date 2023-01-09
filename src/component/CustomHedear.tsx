@@ -3,9 +3,9 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 
 interface Props {
   title: string;
-  containerstyle: string;
-  titleTextstyle: string;
-  imageurl: any;
+  containerstyle?: string;
+  titleTextstyle?: string;
+  imageurl?: any;
 }
 
 const CustomHedear: FC<Props> = (props: any) => {
@@ -15,6 +15,7 @@ const CustomHedear: FC<Props> = (props: any) => {
     titleTextstyle = '',
     imageurl = '',
   } = props;
+
   return (
     <View style={[styles.container, containerstyle]}>
       <Text style={[styles.titleText, titleTextstyle]}>{title}</Text>
@@ -22,6 +23,7 @@ const CustomHedear: FC<Props> = (props: any) => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',

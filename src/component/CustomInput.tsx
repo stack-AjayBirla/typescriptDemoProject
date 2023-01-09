@@ -4,10 +4,10 @@ import {View, Text, StyleSheet, TextInput, ViewStyle} from 'react-native';
 interface Props {
   placeholder: string;
   title: string;
-  secureTextEntry: boolean;
-  onChangeText: (text: string) => void;
-  keyboardtype: any;
-  style: ViewStyle;
+  secureTextEntry?: boolean;
+  onChangeText?: (text: string) => void;
+  keyboardtype?: any;
+  style?: ViewStyle;
 }
 
 const CustomInput: FC<Props> = ({

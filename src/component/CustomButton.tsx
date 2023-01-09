@@ -10,9 +10,9 @@ import {
 
 interface Props {
   title: string;
-  buttonText: TextStyle;
-  style: ViewStyle;
-  onpress: () => void;
+  buttonText?: TextStyle;
+  style?: ViewStyle;
+  onpress?: () => void;
 }
 
 const CustomButton: FC<Props> = ({title, buttonText, style, onpress}) => {

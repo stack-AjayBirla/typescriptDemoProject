@@ -1,13 +1,10 @@
 import React from "react";
-import { View,Text } from "react-native";
-import CostomInput from "./src/component/CostomInput";
-
-const App:React.FC=()=>{
+import AppNavigator from "./src/navigation/AppNavigator";
+import 'react-native-gesture-handler'
+const App=()=>{
   return(
-    <View>
-      <Text>app screen </Text>
-      <CostomInput title={'please enter your name'}/>
-    </View>
+  <AppNavigator/>
   )
 }
+
 export default App;
